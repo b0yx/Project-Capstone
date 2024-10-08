@@ -1,0 +1,137 @@
+body {
+  background-color: #27CBA7;
+  font-family: Tahoma, sans-serif;
+  direction: rtl; /* Keeps the RTL direction for text alignment */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-card {
+  background-color: #44ECB1;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  width: 90vw; /* Makes the card almost full width */
+  max-width: 1200px; /* Max width for larger screens */
+  justify-content: space-between;
+  font-family: Tahoma, sans-serif;
+}
+
+/* Child card for form */
+.child-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 100px; /* Adds space between image and form */
+  font-family: Tahoma, sans-serif;
+}
+
+.child-card h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.child-card h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* Input field styles */
+.input-field {
+  width: 100%; /* Adjusted to fit inside the card */
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 1px solid #44ECB1;
+  font-size: 1em;
+  font-weight: bold;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #000;
+  font-family: Tahoma, sans-serif;
+}
+
+.input-field:focus {
+  border: 1px solid #4CAF50;
+}
+
+/* Button styles */
+.button {
+  width: 40%;
+  padding: 5px;
+  margin-top: 15px;
+  background-color: #fff;
+  color: #44ECC4;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bolder;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: Tahoma, sans-serif;  
+}
+
+.button:hover {
+  background-color: #44ECC4;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Image container for illustration */
+.illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.illustration img {
+  background-color: #fff;
+  height: 650px; /* Set a specific height */
+  width: auto; /* Let the width adjust automatically to maintain the aspect ratio */
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .parent-card {
+    flex-direction: column;
+    width: 95vw;
+  }
+
+  .child-card {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .illustration {
+    padding-left: 0;
+  }
+
+  .illustration img {
+    width: 60%; /* Adjusted for smaller screens */
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+}
